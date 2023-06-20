@@ -1,0 +1,779 @@
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>	
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+	<link href='open-sans.css' rel='stylesheet' type='text/css'>
+
+	 <link rel="icon" type="image/png" href="https://autoskola.hr/wp-content/uploads/2021/07/cropped-favicon.v1-32x32.png"/>
+	  <title>Cijenik</title>
+
+
+	 <script src="scroll.js"></script>
+         <script src="scroll.js" type="text/javascript"></script>
+
+<style>
+
+section {
+  height: 100vh;
+  width : 100vh;
+}
+
+body{
+
+	font-family: 'Open Sans',Helvetica,Arial,Lucida,sans-serif !important;
+	line-height: 1.7em;
+	 overflow-x: hidden;
+}
+
+a, a:hover{
+
+	text-decoration:none !important;;
+	color: inherit;
+
+}
+.font{
+
+	font-family: Arial, sans-serif;
+}
+
+.pocetna{
+
+	background-image: url("početnaslika.png");
+	padding-top:20%;
+    padding-bottom:20%;
+	padding-right:15%;
+	padding-left:15%;
+  background-repeat: no-repeat;
+ background-size: cover;	
+
+	 width: 100%;
+  height: 50%;
+}
+
+.navbar{
+  overflow: hidden;
+  background-color: rgba(45, 45, 45, 0.9);
+  position: fixed;
+  top: 0;
+  left:0;
+  width: 100%;
+  border-width:0;
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+ z-index: 2;
+  padding-bottom:10px;
+  display: block;
+ border-radius: 0px;
+}
+
+.navbar.scrolled {
+  background-color: rgba(133, 133, 133, 0.7); /* Change the transparency as needed */
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.navbar li {
+  float: left;
+}
+
+.navbar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar-inverse .navbar-nav > li > a{
+
+color:#d7d8d7;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover{
+
+color:#aeb0af;
+opacity:0.7;
+}
+
+.nav > li {                                                             
+    display:Inline-block;
+    padding: 13px 0px 0px 3px;
+    color:white !important;                         
+}
+
+.container2 {
+  position: relative;
+  text-align: center;
+  color: white;
+  width:100%;
+  padding-left:0;
+ padding-right:0;
+  
+}
+
+.tekst1{
+
+ 
+font-weight:600 !important;
+color: #cccccc !important; 
+
+
+
+}
+
+.button3 {
+
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: #49c128; 
+  color: white; 
+  border-color: #49c128;
+  border-radius: 4px;
+  font-weight: 700 !important;
+  padding-top: 16px !important;
+padding-right: 39px !important;
+padding-bottom: 16px !important;
+padding-left: 39px !important;
+
+}
+
+.button3:hover {
+  background-color: white;
+  color: #49c128;
+  border: 2px solid #49c128;
+}
+
+
+.container-a {
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  align-items: center;
+	 flex-direction: row;
+
+
+
+}
+
+
+.container-a > div {
+  background-color: white;
+  width: 100%;
+  margin: 90px;
+  padding-left: 50px;
+  padding-top:50px;
+  padding-bottom:50px;
+  padding-right:50px;
+ justify-content: center; 
+
+  text-align: center;
+  line-height: auto;
+
+  font-size: 25px;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media (max-width: 800px) {
+  .container-a {
+    flex-direction: column;
+    margin: 80px;
+  padding-left: 30px;
+  padding-top:30px;
+  padding-bottom:30px;
+  padding-right:30px;
+  }
+ }
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  background-color: #49c128 !important;
+}
+
+.flex-container > div {
+  color: white;
+  width: 300px;
+  margin: 30px;
+  text-align: center;
+
+  font-size: 25px;
+}
+
+@media (max-width: 800px){
+
+.flex-container {
+    flex-direction: column;
+    margin: 30px;
+  padding-left: 30px;
+  padding-top:30px;
+  padding-bottom:30px;
+  padding-right:30px;
+  }
+.da{
+flex-direction: column;
+    margin: 30px;
+  padding-left: 30px;
+  padding-top:30px;
+  padding-bottom:30px;
+  padding-right:30px;
+
+}
+.end {
+    flex-direction: column;
+    margin: 10%;
+  padding-left: 30px;
+  padding-top:30px;
+  padding-bottom:30px;
+  padding-right:30px;
+  }
+
+
+footer	{
+    flex-direction: column;
+    margin: 30px;
+  padding-left: 30px;
+  padding-top:30px;
+  padding-bottom:30px;
+  padding-right:30px;
+
+
+}
+}
+
+.responsive {
+  width: 100%;
+  height: auto;
+position: relative;
+  z-index: 1;
+}
+
+.siva{
+color:#6b6d6e;
+
+}
+
+input[type="text"]{
+
+	border:none;
+	 outline: none;
+	background-color: #e6e7e7;
+	margin:25px;
+	padding:10px;
+	width:250px;
+
+	
+}
+
+.poruka{
+
+	border:none;
+	 outline: none;
+	background-color: #e6e7e7;
+	margin:25px;
+	padding:10px;
+
+
+}
+
+button[type="submit"] {
+  
+  position: absolute;
+  right: 0;
+}
+
+
+.end{
+	display: flex;
+  	justify-content: center;
+  	background-color: #3e3e3f;
+}
+
+
+.end > div {
+
+  width: 300px;
+  margin: 50px;
+  text-align: center;
+  color:#bcbcbc;
+  font-size: 16px;
+  padding:30px;
+  text-decoration:none;
+}
+
+.linija{
+	
+	text-align:left;
+	line-height:30px;
+
+}
+
+footer {
+      color:#bcbcbc;
+      background-color: #2a2a2a;
+      padding: 20px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+    }
+
+.footer-left{
+
+	text-align:left;
+
+}
+
+.footer-right{
+
+	text-align:right;
+
+}
+
+ .footer-section {
+      margin: 20px;
+      flex-basis: 100%;
+    }
+
+.sjena{
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+border-radius: 10px;
+margin:0;
+padding:0;
+
+}
+
+
+.pricing-table .pricing-price {
+  font-size:40px;
+  border: 0px;
+}
+
+
+.pricing-table .panel-primary > .panel-heading {
+  background-color:#20d0c8;
+  background-image:none;
+  color:white;
+  font-weight:bold;
+border: 0px;
+}
+
+a.btn.btn-primary.button:hover {
+  background-color:#fff;
+  color:#20d0c8;
+  transition:0.7s ease-out;
+  border:1px solid #20d0c8;
+}
+
+a.btn.btn-primary2:hover {
+  background-color:#fff;
+  color:#49c128;
+  transition:0.7s ease-out;
+  border:1px solid #49c128;
+}
+
+
+
+a.btn.btn-primary.button {
+  width:100%;
+
+}
+
+
+a.btn.btn-primary2 {
+  width:100%;
+
+}
+
+.pricing-table {
+  -webkit-transition:all .3s ease;
+  -moz-transition:all .3s ease;
+  -ms-transition:all .3s ease;
+  -o-transition:all .3s ease;
+  transition:all .3s ease;
+  -webkit-transform:translate(0px,0px);
+  -moz-transform:translate(0px,0px);
+  -ms-transform:translate(0px,0px);
+  -o-transform:translate(0px,0px);
+  transform:translate(0px,0px);
+}
+
+.pricing-table:hover {
+  -webkit-transform:translate(0px,-10px);
+  -moz-transform:translate(0px,-10px);
+  -ms-transform:translate(0px,-10px);
+  -o-transform:translate(0px,-10px);
+  transform:translate(0px,-10px);
+}
+
+li.list-group-item {
+  text-align:center;
+  text-transform:capitalize;
+  border: 0px;
+}
+
+span.text-lowercase.pricing-duration {
+  color:#5c5a5b;
+  font-size:20px;
+}
+
+#pricing2 p.lead.text-nowrap.text-uppercase.text-center.pricing-price {
+  font-size:35px;
+}
+
+a.btn.btn-primary {
+  background-image:none;
+  background-color:#20d0c8;
+  box-shadow:none;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-size:12px;
+  border-radius:0px;
+  border:0px;
+  padding:10px 0px;
+}
+
+.btn.btn-primary2 {
+  background-image:none;
+  background-color:#49c128;
+  box-shadow:none;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-size:12px;
+  border-radius:0px;
+  border:0px;
+  padding:10px 0px;
+
+}
+
+
+#pricing2 .panel-primary > .panel-heading {
+  background-color:#222;
+  background-image:none;
+  font-family:'proxima nova', sans-serif;
+}
+
+
+
+div.panel.panel-primary {
+  border-color:#000;
+border: 0px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+a:hover, a:focus {
+  text-decoration:none;
+}
+
+.lista{
+
+	line-height: 2em;
+	color: #484749;
+	font-weight: 500;
+	font-size:18px;
+	
+}
+
+.border{
+
+	border: 5px solid black;
+	padding:10px;
+	 display: inline-flex;
+	flex: 1;
+	border-color: #49c128;
+	    border-radius: 16px 16px 16px 16px;
+	background-color:#ebfae7;
+}
+
+</style>
+
+</head>
+
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <ul class="nav navbar-nav">
+	<img src="logoautoskola.png">
+	</ul>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+     
+      <ul class="nav navbar-nav navbar-right">
+	<li><a href="Autoškola.html">POČETNA</a></li>
+        <li><a href="#">CJENIK</a></li>
+        <li><a href="Onama.html">O NAMA</a></li>
+	<li><a href="Karijere.html">KARIJERE</a></li>
+ 	<li><a href="Kontakt.html">KONTAKT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="pocetna">
+  <div class="container2">
+        <h2 style = " font-weight: 700 !important; font-size:50px! important;">
+<a>Cjenik</a>
+</h2>
+  </div>
+</div>
+
+
+<div id="pricing-tables">
+    <div class="container" style="padding:50px;">
+        <div class="row">
+            <div class= "col-md-4 col-sm-4 col-xs-12 pricing-table">
+                <div class="panel panel-primary">
+                    
+                    <div class="panel-body">
+                        <p class="lead text-nowrap text-center pricing-price" style="margin-bottom:0; color:#49c128;">0Kn<span class="text-lowercase pricing-duration">/mj </span> </p>
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item"><span>Do 30 kandidata godišnje</span></li>
+                        <li class="list-group-item"><span>*bez ugovorne obveze</span></li>
+
+                    </ul>
+                    <div class="panel-footer"><a class="btn btn-primary2 button" role="button" href="#">POŠALJI UPIT</a></div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-12 pricing-table">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="text-nowrap text-uppercase text-center panel-title">Standard </h3></div>
+                    <div class="panel-body">
+                        <p class="lead text-nowrap text-center pricing-price" style="margin-bottom:0; color:#20d0c8;">200Kn<span class="text-lowercase pricing-duration">/mj </span> </p>
+                    </div>
+                    <ul class="list-group">
+                     
+                        <li class="list-group-item"><span>Od 30 do 400 kandidata godišnje</span></li>
+	 		<li class="list-group-item"><span>*bez ugovorne obveze</span></li>
+                    </ul>
+                    <div class="panel-footer"><a class="btn btn-primary button" role="button" href="#" style="width:100%;font-family:&#39;proxima nova&#39;, sans-serif;">POŠALJI UPIT</a></div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-12 pricing-table" style="/*padding:0px 50px;*/">
+                <div class="panel panel-primary">
+                    
+                    <div class="panel-body">
+                        <p class="lead text-nowrap text-center pricing-price" style="margin-bottom:0; color:#49c128;">300Kn<span class="text-lowercase pricing-duration">/mj </span> </p>
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item"><span>400+ kandidata godišnje</span></li>
+                        <li class="list-group-item"><span>*bez ugovorne obveze</span></li>
+                    </ul>
+                    <div class="panel-footer"><a class="btn btn-primary2 button" role="button" href="#" style="width:100%;font-family:&#39;proxima nova&#39;, sans-serif;">POŠALJI UPIT</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+
+<h1 style = "font-size: 21px; text-align:center; font-weight: 700;"> Želite platiti unaprijed za cijelu godinu? Dobivate dva mjeseca gratis!</h1>
+<br><br><br>
+<div class = "da">
+<div class = "row">
+
+<div class="col-sm-2">
+</div>
+</div>
+<div class ="border">
+
+<div class="col-sm-8">
+<div class ="lista">
+<ul>
+  <li>Mobilna aplikacija za iOS i Android uređaje</li>
+  <li>Jednostavna evidencija kandidata i grupa</li>
+  <li>Uvid u aktivnost svakog kandidata</li>
+  <li>Simulacija ispita iz Prometnih propisa i sigurnosnih pravila</li>
+  <li>Korištenje postojećih ili stvaranje vlastitih domaćih zadaća</li>
+  <li>Pristup bazi od 1100+ redovito ažuriranih pitanja</li>
+</ul>
+</div>
+</div>
+
+
+
+<div class ="lista">
+<ul>
+  <li>Pristup materijalima za predavanja, mogućnost uploada vlastitih materijala</li>
+  <li>Pregled najnovijih zakonskih regulativa</li>
+  <li>Slanje obavijesti putem e-maila i mobilne aplikacije (push notifikacije)</li>
+  <li>Uvijek dostupna tehnička i korisnička podrška</li>
+</ul>
+
+</div>
+</div>
+
+
+<div class="col-sm-2">
+</div>
+</div>
+
+<br><br>
+<br>
+<br>
+
+<div class = "row">
+<div class="col-sm-2">
+</div>
+<div class="col-sm-6">
+
+	<h3 style = "font-weight : 700;"> Prva dva mjeseca korištenja platforme potpuno su besplatna! </h3><br>
+	<p style = "color: #666;  font-size:20px;">Prije početka korištenja, pružamo besplatnu edukaciju o sustavu i načinu na koji se koristi, kako bi vam početak bio što lakši i ugodniji!</p>
+
+</div>
+<div class="col-sm-2">
+
+	<img src = "zgrada.png">
+
+</div>
+<div class="col-sm-2">
+</div>
+
+</div>
+<br><br><br><br>
+
+<h1 style = "font-weight : 700; text-align:center;"> Kako izgleda suradnja s nama? </h1><br>
+<div class = "row">
+
+<div class="col-sm-2">
+</div>
+
+<div class="col-sm-4">
+<div class ="lista">
+<ul>
+  <li>Nema ugovorne obveze</li>
+  <li>Uvijek dostupna korisnička podrška za kandidate i autoškole</li>
+  <li>Redovita komunikacija s našim timom</li>
+  <li>Imate prijedlog kako poboljšati i nadograditi sustav? Rado ćemo vas saslušati</li>
+  <li>Posvetite vrijeme nastavi i kandidatima, a mi ćemo se pobrinuti da imate pristup svim bitnim informacijama</li>
+</ul>
+</div>
+
+</div>
+
+
+<div class="col-sm-4">
+
+	<img src = "rukovanje.png" width = 500px;>
+
+</div>
+
+<div class="col-sm-2">
+</div>
+</div>
+
+</div>
+
+
+<br><br><br><br>
+<center><h1 style ="font-weight:700; font-size:36px;"> Imate dodatnih pitanja? Javite nam se! </h1><br> </center>
+
+<br><br><br>
+<div class = "row">
+<div class="col-sm-2">
+</div>
+
+<div class="col-sm-3">
+
+	 <center><img src="branko.jpg" style="width:auto; height:300px; margin:10px;"> <br><br> 
+	<p style ="color:#6b6d6e; font-weight:700; font-size:18px; "> Branko Vranešević </p> <br> <p style ="font-size:18px;  color:#6b6d6e;">Reginal Business Manager</p> <br> <p style ="font-size:18px; color:#6b6d6e;">+385 1 7776 790 </p></center>
+
+</div>
+
+
+<div class="col-sm-6">
+
+<form>
+<div class = "info">
+  <input type="text" id="mytext" class="input" data-field_type="input" data-original_id="imeautoskole" placeholder="Ime autoškole"> <input type="text" id="mytext" class="input" data-field_type="input" placeholder="Ime i prezime"> <br>
+	<input type="text" id="mytext" class="input" data-field_type="input" placeholder="E-mail adresa"> <input type="text" id="mytext" class="input" data-field_type="input" placeholder="Kontakt broj"><br>
+	<textarea name="poruka" id="myporuka" class="poruka" data-field_type="text" data-original_id="poruka" rows="4" cols="82" placeholder="Poruka"></textarea><br>
+  
+
+<label for="checkbox">	<input type="checkbox" id="checkbox" name="checkbox"> Dozvoljavam da Speck d.o.o., vlasnik brenda Autoškola.hr, koristi moje kontaktne podatke u svrhu obrade/provedbe zahtjeva/upita i u svrhu slanja informacija, savjeta i upita o povezanim proizvodima i uslugama (molimo, označite ako se slažete s obrađivanjem vaših osobnih podataka u navedenu svrhu).</label>
+<br>
+
+<button class="button3 button1" type="submit">Pošalji</button>
+
+</div>
+</form>
+
+</div>
+
+<div class="col-sm-1">
+</div>
+</div>
+<br>
+<br>
+<br>
+<div class="end">
+  <div> <img src="logoautoskola.png"> <br><br> <p> info@autoskola.hr </p> </div>
+  <div> 
+	<div class = "linija">
+	<p style = "font-weight:600;">Navigacija</p>
+	<p><a href="Autoškola.html">Početna</a></p> 
+	<p><a href="Onama.html">O nama</a></p> 
+	<p><a href="Kontakt.html">Kontakt</a></p>
+	<p><a href="Cjenik.html">Cjenik</a></p>
+	<p><a href="Karijere.html">Karijere</a></p>
+	<p><a href="">Politika privatnosti</a></p>
+	<p><a href="">Politika o kolačićima</a></p>
+	<p><a href="">Uvjeti korištenja</a></p>
+	</div>
+</div>
+
+  	<div>
+	<div class = "linija"><p style = "font-weight:600;">MOBILNA APLIKACIJA</p>
+	<p><a href="https://play.google.com/store/apps/details?id=speck.autoskola.client">Google Play</a></p> 
+	<p><a href="https://apps.apple.com/tt/app/auto%C5%A1kola-hr/id1566849464">Apple App Store</a></p> 
+	<p><a href="https://appgallery.huawei.com/#/app/C104526343">HUAWEI AppGallery</a></p> 
+</div>
+</div>
+
+</div>  
+</div>
+
+ <footer>
+    <div class="footer-section footer-left">
+      <p style = "font-weight: 700;"><a href="https://www.speck.agency">© 2021.Speck d.o.o.</a></p>
+    </div>
+    <div class="footer-section footer-right">
+      <p><i class="fab fa-facebook-f"></i></p>
+    </div>
+  </footer>
+
+
+
+</body>
+
+
+
+
+</html>
